@@ -2,7 +2,7 @@
   <div class="poster">
     <img src="{{ posterUrl }}" alt="movie poster">
     <div class="button-container">
-      <ion-icon name="add-circle" class="add-button"></ion-icon>
+      <ion-icon name="add-circle" class="add-button" (click)="addToWatchList(movieTitle)"></ion-icon>
     </div>
     <div class="stars">
       <ion-icon name="star" class="star star-1"></ion-icon>

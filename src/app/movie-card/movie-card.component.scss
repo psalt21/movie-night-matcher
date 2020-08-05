@@ -1,6 +1,8 @@
 .card-container {
     display: flex;
     flex-direction: row;
+    max-width: 160px;
+    flex-wrap: wrap;
 }
 
 .poster {
@@ -31,7 +33,7 @@
     border-radius: 14px;
     height: 26px;
     width: 26px;
-    color: .2D9CDB;
+    color: #2D9CDB;
     background-color: white;
     box-shadow: -3px -2px 7px black;
 }
