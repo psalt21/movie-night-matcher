@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { ToastController, ModalController } from '@ionic/angular';
+import { MovieInfoModalComponent } from '../modals/movie-info-modal/movie-info-modal.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -16,7 +17,7 @@ export class MovieCardComponent implements OnInit {
   added = false;
   toastMessage = '';
 
-  constructor(public toastController: ToastController) { }
+  constructor(public toastController: ToastController, public modalController: ModalController) { }
   ngOnInit() {}
 
   addToWatchList(movieTitle: string) {
@@ -37,9 +38,21 @@ export class MovieCardComponent implements OnInit {
 
     const toast = await this.toastController.create({
       message: movieTitle + this.toastMessage,
-      duration: 2000
+      duration: 2000,
+      color: 'primary'
     });
     toast.present();
   }
 
+  openMovieInfo() {
+    this.presentModal();
+  }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: MovieInfoModalComponent,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 }
