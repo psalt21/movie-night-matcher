@@ -2,15 +2,18 @@
   <div class="poster">
     <img src="{{ posterUrl }}" alt="movie poster">
     <div class="button-container">
-      <ion-icon name="add-circle" class="add-button" (click)="addToWatchList(movieTitle)"></ion-icon>
+      <ion-icon *ngIf="!added" name="add-circle" class="poster-button add-button" (click)="addToWatchList(movieTitle)"></ion-icon>
+      <ion-icon *ngIf="added" name="remove-circle" class="poster-button remove-button" (click)="addToWatchList(movieTitle)"></ion-icon>
     </div>
-    <div class="stars">
+    <div class="reviews">
       <ion-icon name="star" class="star star-1"></ion-icon>
       <ion-icon name="star" class="star star-1"></ion-icon>
       <ion-icon name="star" class="star star-3"></ion-icon>
       <ion-icon name="star-half" class="star star-4"></ion-icon>
       <ion-icon name="star-outline" class="star star-5"></ion-icon>
+      <p class="review-count">{{ reviewCount }}</p>
     </div>
+    <a class="review-link" href="#">review this movie</a>
     <p class="movie-title">{{ movieTitle }}</p>
     <p class="year">{{ releaseYear }}</p>
   </div>

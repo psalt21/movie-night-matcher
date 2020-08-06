@@ -19,19 +19,45 @@
     font-size: 12px;
 }
 
-.add-button {
+.poster-button {
     position: absolute;
     right: -9px;
     bottom: -3px;
     border-radius: 14px;
     height: 26px;
     width: 26px;
-    color: #2D9CDB;
     background-color: white;
     box-shadow: -3px -2px 7px black;
 }
 
- .star {
+.add-button {
+    color: #2D9CDB;
+}
+
+.remove-button {
+    color: #EB5757;
+}
+
+.review-count {
+    position: absolute;
+    right: 7px;
+    bottom: 39px;
+    font-size: 11px;
+    color: #bbbbbb;
+    text-align: left;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+}
+
+.review-link {
+    font-size: 10px;
+}
+
+.star {
      color: #F2C94C;
      font-size: 22px;
  }
