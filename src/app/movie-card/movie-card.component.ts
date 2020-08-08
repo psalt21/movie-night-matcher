@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ToastController, ModalController } from '@ionic/angular';
 import { MovieInfoModalComponent } from '../modals/movie-info-modal/movie-info-modal.component';
+import { singleMovieData } from '../test-data-individual-movie';
+
 
 @Component({
   selector: 'app-movie-card',
@@ -11,7 +13,7 @@ export class MovieCardComponent implements OnInit {
   @Input() posterUrl: string;
   @Input() movieTitle: string;
   @Input() releaseYear: string;
-  @Input() rating: number;
+  @Input() reviewScore: number;
   @Input() reviewCount: number;
 
   added = false;
@@ -51,7 +53,11 @@ export class MovieCardComponent implements OnInit {
   async presentModal() {
     const modal = await this.modalController.create({
       component: MovieInfoModalComponent,
-      cssClass: 'my-custom-class'
+      cssClass: 'my-custom-class',
+      componentProps: {
+        movieData: singleMovieData,
+        reviewCount: this.reviewCount
+      }
     });
     return await modal.present();
   }
