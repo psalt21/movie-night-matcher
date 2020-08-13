@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-movie-info-modal',
-  templateUrl: './movie-info-modal.component.html',
-  styleUrls: ['./movie-info-modal.component.scss'],
+  selector: 'app-movie-review-modal',
+  templateUrl: './movie-review-modal.component.html',
+  styleUrls: ['./movie-review-modal.component.scss'],
 })
-export class MovieInfoModalComponent implements OnInit {
-  
-  constructor(public modalCtrl: ModalController ) { }
+export class MovieReviewModalComponent implements OnInit {
+
+  constructor(public modalCtrl: ModalController) { }
 
   ngOnInit() {}
 
