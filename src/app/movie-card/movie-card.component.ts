@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ToastController, ModalController } from '@ionic/angular';
 import { MovieInfoModalComponent } from '../modals/movie-info-modal/movie-info-modal.component';
 import { singleMovieData } from '../test-data-individual-movie';
+import { MovieReviewModalComponent } from '../modals/movie-review-modal/movie-review-modal.component';
 
 
 @Component({
@@ -47,10 +48,10 @@ export class MovieCardComponent implements OnInit {
   }
 
   openMovieInfo() {
-    this.presentModal();
+    this.presentMovieInfoModal();
   }
 
-  async presentModal() {
+  async presentMovieInfoModal() {
     const modal = await this.modalController.create({
       component: MovieInfoModalComponent,
       cssClass: 'my-custom-class',
@@ -58,6 +59,19 @@ export class MovieCardComponent implements OnInit {
         movieData: singleMovieData,
         reviewCount: this.reviewCount
       }
+    });
+    return await modal.present();
+  }
+
+  openReviewModal() {
+    this.presentReviewModal();
+  }
+
+  async presentReviewModal() {
+    const modal = await this.modalController.create({
+      component: MovieReviewModalComponent,
+      cssClass: 'my-custom-class',
+      componentProps: {}
     });
     return await modal.present();
   }
