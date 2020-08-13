@@ -1,20 +1,22 @@
 <div class="card-container">
-  <div class="poster">
-    <img src="{{ posterUrl }}" alt="movie poster">
+    <img src="{{ posterUrl }}" alt="movie poster" (click)="openMovieInfo()" class="poster clickable">
     <div class="button-container">
       <ion-icon *ngIf="!added" name="add-circle" class="poster-button add-button" (click)="addToWatchList(movieTitle)"></ion-icon>
       <ion-icon *ngIf="added" name="remove-circle" class="poster-button remove-button" (click)="addToWatchList(movieTitle)"></ion-icon>
     </div>
-    <div class="reviews">
-      <ion-icon name="star" class="star star-1"></ion-icon>
-      <ion-icon name="star" class="star star-1"></ion-icon>
-      <ion-icon name="star" class="star star-3"></ion-icon>
-      <ion-icon name="star-half" class="star star-4"></ion-icon>
-      <ion-icon name="star-outline" class="star star-5"></ion-icon>
-      <p class="review-count">{{ reviewCount }}</p>
+    <div class="reviews" (click)="openMovieInfo()">
+      <div class="stars clickable">
+        <ion-icon name="star" class="star star-1"></ion-icon>
+        <ion-icon name="star" class="star star-1"></ion-icon>
+        <ion-icon name="star" class="star star-3"></ion-icon>
+        <ion-icon name="star-half" class="star star-4"></ion-icon>
+        <ion-icon name="star-outline" class="star star-5"></ion-icon>
+      </div>
+      <p class="review-count clickable">{{ reviewCount }}</p>
     </div>
-    <a class="review-link" href="#">review this movie</a>
-    <p class="movie-title">{{ movieTitle }}</p>
-    <p class="year">{{ releaseYear }}</p>
-  </div>
+    <p class="review-link" (click)="openReviewModal()">review this movie</p>
+    <div (click)="openMovieInfo()" class="clickable">
+      <p class="movie-title">{{ movieTitle }}</p>
+      <p class="year">{{ releaseYear }}</p>
+    </div>
 </div>

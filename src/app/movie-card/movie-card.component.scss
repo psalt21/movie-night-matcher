@@ -1,4 +1,4 @@
-.poster {
+.card-container {
     margin: 10px 10px 0 10px;
     position: relative;
 }
@@ -20,6 +20,7 @@
 }
 
 .poster-button {
+    cursor: pointer;
     position: absolute;
     right: -9px;
     bottom: -3px;
@@ -27,7 +28,7 @@
     height: 26px;
     width: 26px;
     background-color: white;
-    box-shadow: -3px -2px 7px black;
+    box-shadow: -3px -2px 5px black;
 }
 
 .add-button {
@@ -39,25 +40,29 @@
 }
 
 .review-count {
-    position: absolute;
-    right: 7px;
-    bottom: 39px;
     font-size: 11px;
     color: #bbbbbb;
-    text-align: left;
 }
 
 .reviews {
     display: flex;
     flex-direction: row;
     margin-top: 4px;
+    margin-bottom: -13px;
 }
 
 .review-link {
-    font-size: 10px;
+    margin: 4px 0;
+    font-size: 9pt;
+    color: #2D9CDB;
+    cursor: pointer;
 }
 
 .star {
      color: #F2C94C;
      font-size: 22px;
+ }
+
+ .clickable {
+     cursor: pointer;
  }

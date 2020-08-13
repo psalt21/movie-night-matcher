@@ -1,0 +1,79 @@
+:host {
+    margin-top: 34px;
+    display: grid;
+    grid-template-rows: [header] 18px 1fr;
+    justify-items: center;
+    
+}
+
+.movie-info-header {
+    margin: 0 auto;
+}
+
+.movie-title {
+    margin: 0px 43px 0 43px;
+    text-align: center;
+    color: #EB5757;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.close-modal-button {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: -2px;
+    font-size: 28px;
+}
+
+.movie-info-container {
+    margin: 20px 24px 0 24px;
+}
+
+.poster-image {
+    box-shadow: 2px 1px 5px grey;
+    max-width: 257px;
+}
+
+.movie-information {
+    color: black;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+}
+
+.review-count {
+    font-size: 11px;
+    color: #bbbbbb;
+    margin-left: 7px;
+}
+
+.star {
+    color: #F2C94C;
+    font-size: 30px;
+}
+
+.movie-additional-info {
+    color: black;
+    font-size: 12px;
+    margin-bottom: -6px;
+}
+
+.external-ratings {
+    color: black;
+    font-size: 10px;
+}
+
+.movie-breakdown {
+    color: black;
+    font-size: 12px;
+    margin-bottom: -6px;
+}
+
+.breakdown-title {
+    color: #EB5757;
+    font-weight: 500;
+}
