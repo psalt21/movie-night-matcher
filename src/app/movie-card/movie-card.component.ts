@@ -71,7 +71,9 @@ export class MovieCardComponent implements OnInit {
     const modal = await this.modalController.create({
       component: MovieReviewModalComponent,
       cssClass: 'my-custom-class',
-      componentProps: {}
+      componentProps: {
+        movieData: singleMovieData
+      }
     });
     return await modal.present();
   }

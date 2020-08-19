@@ -1,33 +1,8 @@
-:host {
-    margin-top: 34px;
-    display: grid;
-    grid-template-rows: [header] 18px 1fr;
-    justify-items: center;
-    
-}
+// :host {
+// }
 
-.movie-info-header {
-    margin: 0 auto;
-}
-
-.movie-title {
-    margin: 0px 43px 0 43px;
-    text-align: center;
-    color: #EB5757;
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.close-modal-button {
-    color: black;
-    position: absolute;
-    right: 8px;
-    top: -2px;
-    font-size: 28px;
-}
-
-.movie-info-container {
-    margin: 20px 24px 0 24px;
+.content-wrapper {
+    padding: 15px;
 }
 
 .poster-image {
@@ -76,4 +51,11 @@
 .breakdown-title {
     color: #EB5757;
     font-weight: 500;
+}
+
+.review-link {
+    margin: 4px 0;
+    font-size: 9pt;
+    color: #2D9CDB;
+    cursor: pointer;
 }

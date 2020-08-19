@@ -1,4 +1,11 @@
-<p>
-  movie-review-modal works!
-</p>
-<ion-icon name="close" class="close-modal-button" (click)="dismiss()"></ion-icon>
+<ion-header translucent>
+  <ion-toolbar text-wrap>
+    <ion-title>{{ movieData.Title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  
+</ion-content>
