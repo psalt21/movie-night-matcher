@@ -4,15 +4,15 @@
       <ion-icon *ngIf="!added" name="add-circle" class="poster-button add-button" (click)="addToWatchList(movieTitle)"></ion-icon>
       <ion-icon *ngIf="added" name="remove-circle" class="poster-button remove-button" (click)="addToWatchList(movieTitle)"></ion-icon>
     </div>
-    <div class="reviews" (click)="openMovieInfo()">
-      <div class="stars clickable">
+    <div class="reviews">
+      <div class="stars clickable" (click)="openMovieInfo()">
         <ion-icon name="star" class="star star-1"></ion-icon>
         <ion-icon name="star" class="star star-1"></ion-icon>
         <ion-icon name="star" class="star star-3"></ion-icon>
         <ion-icon name="star-half" class="star star-4"></ion-icon>
         <ion-icon name="star-outline" class="star star-5"></ion-icon>
       </div>
-      <p class="review-count clickable">{{ reviewCount }}</p>
+      <p class="review-count clickable" (click)="openReviewModal()">{{ reviewCount }}</p>
     </div>
     <p class="review-link" (click)="openReviewModal()">review this movie</p>
     <div (click)="openMovieInfo()" class="clickable">

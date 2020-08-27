@@ -19,6 +19,10 @@
     font-size: 12px;
 }
 
+.poster {
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, .40);
+}
+
 .poster-button {
     cursor: pointer;
     position: absolute;
@@ -28,7 +32,6 @@
     height: 26px;
     width: 26px;
     background-color: white;
-    box-shadow: -3px -2px 5px black;
 }
 
 .add-button {
@@ -42,6 +45,7 @@
 .review-count {
     font-size: 11px;
     color: #bbbbbb;
+    margin-left: 5px;
 }
 
 .reviews {
