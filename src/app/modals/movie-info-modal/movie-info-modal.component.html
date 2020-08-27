@@ -9,17 +9,17 @@
 <ion-content fullscreen>
   <div class="content-wrapper">
     <img src="{{ movieData.Poster }}" alt="movie poster" class="poster-image">
-    <div class="reviews" (click)="openMovieInfo()">
-      <div class="stars">
+    <div class="reviews">
+      <div class="stars" (click)="openMovieInfo()">
         <ion-icon name="star" class="star star-1"></ion-icon>
         <ion-icon name="star" class="star star-1"></ion-icon>
         <ion-icon name="star" class="star star-3"></ion-icon>
         <ion-icon name="star-half" class="star star-4"></ion-icon>
         <ion-icon name="star-outline" class="star star-5"></ion-icon>
       </div>
-      <p class="review-count">{{ reviewCount }}</p>
+      <p class="review-count clickable" (click)="openReviewModal()">{{ reviewCount }}</p>
     </div>
-    <p class="review-link" (click)="openReviewModal()">review this movie</p>
+    <p class="review-link clickable" (click)="openReviewModal()">review this movie</p>
     <p class="movie-additional-info">
       {{ movieData.Year }} • {{ movieData.Rated }} • {{ movieData.Runtime }} • {{ movieData.Genre }}
     </p>
