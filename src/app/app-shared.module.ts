@@ -4,6 +4,8 @@ import { HeaderContainerComponent } from './header-container/header-container.co
 import { TopContentComponent } from './top-content/top-content.component';
 import { ContentSeparatorComponent } from './content-separator/content-separator.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { PreciseStarRatingComponent } from './precise-star-rating/precise-star-rating.component';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -12,16 +14,19 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     HeaderContainerComponent,
     TopContentComponent,
     ContentSeparatorComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    PreciseStarRatingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [
     HeaderContainerComponent,
     TopContentComponent,
     ContentSeparatorComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    PreciseStarRatingComponent
   ]
 })
 export class AppSharedModule { }

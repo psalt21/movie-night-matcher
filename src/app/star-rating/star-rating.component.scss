@@ -1,0 +1,21 @@
+.review-count {
+    font-size: 11px;
+    color: #bbbbbb;
+    margin-left: 5px;
+}
+
+.star {
+    color: #F2C94C;
+    font-size: 22px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+    margin-bottom: -13px;
+}
