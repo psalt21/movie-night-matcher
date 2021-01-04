@@ -5,6 +5,7 @@ import { TopContentComponent } from './top-content/top-content.component';
 import { ContentSeparatorComponent } from './content-separator/content-separator.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { PreciseStarRatingComponent } from './precise-star-rating/precise-star-rating.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 import { IonicModule } from '@ionic/angular';
 
 
@@ -15,7 +16,8 @@ import { IonicModule } from '@ionic/angular';
     TopContentComponent,
     ContentSeparatorComponent,
     MovieCardComponent,
-    PreciseStarRatingComponent
+    PreciseStarRatingComponent,
+    StarRatingComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { IonicModule } from '@ionic/angular';
     TopContentComponent,
     ContentSeparatorComponent,
     MovieCardComponent,
-    PreciseStarRatingComponent
+    PreciseStarRatingComponent,
+    StarRatingComponent
   ]
 })
 export class AppSharedModule { }

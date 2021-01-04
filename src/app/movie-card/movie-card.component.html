@@ -4,7 +4,7 @@
       <ion-icon *ngIf="!added" name="add-circle" class="poster-button add-button" (click)="addToWatchList(movieTitle)"></ion-icon>
       <ion-icon *ngIf="added" name="remove-circle" class="poster-button remove-button" (click)="addToWatchList(movieTitle)"></ion-icon>
     </div>
-    <app-precise-star-rating reviewScore={{reviewScore}}></app-precise-star-rating>
+    <app-precise-star-rating reviewScore={{reviewScore}} (click)="openMovieInfo()"></app-precise-star-rating>
     <p class="review-link" (click)="openReviewModal()">review this movie</p>
     <div (click)="openMovieInfo()" class="clickable">
       <p class="movie-title">{{ movieTitle }}</p>

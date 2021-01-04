@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { MovieReviewModalComponent } from '../movie-review-modal/movie-review-modal.component';
 import { singleMovieData } from 'src/app/test-data-individual-movie';
-// import { MovieCardComponent } from '../../movie-card/movie-card.component';
 
 @Component({
   selector: 'app-movie-info-modal',
